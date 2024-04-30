@@ -1,0 +1,30 @@
+html{
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+.container{
+    margin: 0 auto;
+    width: 70%;
+}
+header > div{
+    display: flex;
+    justify-content: center;
+}
+.form-calculadora{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-calculadora form>*{
+    display: block;
+    margin-bottom: 5px;
+}
+.form-calculadora input[type="submit"]{
+    margin: auto;
+}
