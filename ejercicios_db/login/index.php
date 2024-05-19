@@ -9,7 +9,7 @@ $user= new User(); //clase con metodos de usuario
 if(isset($_SESSION['user'])){
 
     echo 'ya hay session abierta';
-    $user-> setUser($userSession->getCurrentUser());
+    $user-> setUser($userSession-> getCurrentUser());
     include_once 'vistas/home.php';
 
 }else if(isset($_POST['username'])&&isset($_POST['password'])){
