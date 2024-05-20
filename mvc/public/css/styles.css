@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header,footer{
+    width: 100%;
+    background-color: gray;
+    text-align: center;
+    padding: 20px 10px;
+}
+.container{
+    margin: 0 auto;
+    width: 70%;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav{
+    padding: 10px;
+    margin: 0px 20px;
+    background-color: bisque;
+}
+.nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.nav ul li{
+    margin: 0px 10px;
+    list-style: none;
+}
+.error{
+    color: red;
+}

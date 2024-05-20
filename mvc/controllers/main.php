@@ -1,10 +1,15 @@
 <?php
 
-class Main{
+class Main extends Controllers{
+
     public function __construct()
     {
-        echo 'archivo controller cargado';
+        parent::__construct();
+        $this->view->render('main/index');
+        # echo '<p>nuevo controller main</p>';
     }
+
+
 }
 
 ?>
