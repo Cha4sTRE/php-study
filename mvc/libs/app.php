@@ -19,6 +19,8 @@ class App{
             $archivoController= "controllers/main.php";
             require_once $archivoController;
             $controller= new Main();
+            $controller->loadModel('main');
+            $controller->render();
             return false;
         }
 
@@ -26,13 +28,18 @@ class App{
         $archivoController= 'controllers/'.$url[0].'.php';
 
         if(file_exists($archivoController)){
-            require_once $archivoController;
-            $controller= new $url[0];
 
-            //comprueba si existe algo despues de la primera direccion
+            require_once $archivoController;
+            //inicializa controlador
+            $controller= new $url[0];
+            $controller->loadModel($url[0]);
+
+            //si hay un metodo
             if(isset($url[1])){
                 #echo 'hay algo en 1';
                 $controller-> {$url[1]}();
+            }else{
+                $controller->render();
             }
 
         }else{
